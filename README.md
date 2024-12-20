@@ -1,50 +1,65 @@
-# Welcome to your Expo app 👋
+# Aprendendo Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Esse é uma aplicação que mostra a utilização de uma API que gera fatos aleatórios sobre 
+gatos. A API em questão é o https://catfact.ninja/.
 
-## Get started
+Para usar esse aplicativo, você deve ter o nodejs instalado na sua máquina. Durante 
+o desenvolvimento, foi utilizado a v23.3. Porém, qualquer versão >v20 deve funcionar bem.
 
-1. Install dependencies
+Ademais, para rodar o app você deve ter instalado em seu celular o aplicativo Expo Go.
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+* [Expo](https://docs.expo.dev/)
+* [React Native](https://reactnative.dev/docs/getting-started)
 
-   ```bash
-    npx expo start
-   ```
+## Rodando a aplicação
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+1. Clone esse repositório em uma pasta vazia com o seguinte comando:
+```sh
+git clone https://github.com/SynesthesiaVision/app2025.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. A seguir, navegue até a pasta:
+```sh
+cd app2025
+```
 
-## Learn more
+3. Instale as dependências:
+```sh
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Rode a aplicação para desenvolvimento:
+```sh
+npx expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Aguarde um momento, quando a versão de desenvolvimento estiver pronta, deve aparecer
+um QR Code no seu terminal. No aplicativo Expo Go no seu smartphone, selecione
+a opção "Scan QR Code" na tela inicial e aponte para esse QR Code. Uma versão de 
+desenvolvimento deve estar disponível para você navegar.
 
-## Join the community
+## Navegando pelo código
 
-Join our community of developers creating universal apps.
+Comece pela pasta app. A aplicação inicial está em `/app/(tabs)/index.tsx`. Há
+alguns comentários lá explicando o código. Depois, dê uma olhada na pasta `/components`.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Conceitos e Ferramentas utilizadas
+
+* [React Native](https://reactnative.dev/docs/getting-started):
+O React Native é uma framework de desenvolvimento mobile que permite a criação 
+de aplicações para Android, IOS e Web com uma única base de código.
+
+Ela é baseada na framework React (que é voltada para Web). A sacada de ambas as
+frameworks é que você consegue usar HTML para dentro do código javascript, em
+arquivos especiais que chamamos `.jsx` (ou `.tsx`, quando utilizamos typescript).
+
+Isso facilita a criação de aplicações altamente dinâmicas e que possuem muitas
+interações com os usuários.
+
+* [Expo](https://docs.expo.dev/):
+O expo é uma plataforma que facilita o desenvolvimento de aplicações React Native.
+Basicamente, ele oferece uma série de funcionalidades que, sem ele, teríamos que
+fazer totalmente "na mão". Vamos utilizá-lo, principalmente, para fazer o desenvolvimento
+da aplicação e ver em tempo real as diferenças diretamente pelo nosso celular.
